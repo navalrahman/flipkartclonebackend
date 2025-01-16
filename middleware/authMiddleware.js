@@ -5,7 +5,7 @@ import Admin from "../models/admin/adminModel.js";
 
 const protect = async (req, res, next) => {
     let { authorization } = req.headers
-    // console.log("tokesssn", req.cookies.jwt);
+    console.log("tokesssn", req.headers);
 
     if (!authorization) {
         return res.status(401).json({ error: "Unauthorized" });
